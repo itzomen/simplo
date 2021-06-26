@@ -1,7 +1,9 @@
 asgiref==3.3.4
+dj-database-url==0.5.0
 Django==3.2.2
 django-cors-headers==3.7.0
 django-countries==7.1
+django-heroku==0.3.1
 django-js-asset==1.2.2
 django-mptt==0.12.0
 django-phonenumber-field==5.1.0
@@ -9,9 +11,12 @@ django-restframework==0.0.1
 django-versatileimagefield==2.0
 djangorestframework==3.12.4
 djangorestframework-simplejwt==4.6.0
+gunicorn==20.1.0
 phonenumbers==8.12.22
 Pillow==8.2.0
+psycopg2==2.9.1
 PyJWT==2.1.0
 python-magic==0.4.22
 pytz==2021.1
 sqlparse==0.4.1
+whitenoise==5.2.0
