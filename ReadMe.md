@@ -1,3 +1,7 @@
+## Simple API for Testing
+
+This api is to be used to perform basic operations from a frontend client.
+
 ## Quick Setup
 
 Make sure you have **Python 3.x** installed and **the latest version of pip** _installed_ before running these steps.
@@ -52,10 +56,3 @@ python manage.py runserver
 
 ```
 
-Enpoints
-
-```json
-    'api/user/login/',
-    'api/user/register/',
-    'api/user/logout/',
-```
