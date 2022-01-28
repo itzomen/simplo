@@ -32,6 +32,7 @@ def create(request):
 
 @api_view(['GET'])
 def categories(request):
+    """Gets All Categories"""
     categories = Category.objects.all()
     serializer = CategorySerializer(categories, many=True)
     return Response(serializer.data)
@@ -60,6 +61,7 @@ def update(request, pk):
 
 @api_view(['DELETE'])
 def delete(request,pk):
+    """Gets Category id and delete it"""
     try:
         category = Category.objects.get(id=pk)       
         category.delete()
