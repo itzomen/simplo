@@ -1,6 +1,5 @@
-from unicodedata import category
 from rest_framework.response import Response 
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import api_view
 from rest_framework import status
 from django.db.models import Q
 from .models import Category
@@ -23,7 +22,7 @@ def create(request):
             category.image = image
             category.save()
 
-        serializer = CategorySerializer(category, many=False)
+        serializer = CategorySerializer(category, many=False, context={"request": request})
         return Response(serializer.data)
     except Exception as e:
         return Response({'details': f"{e}"},status=status.HTTP_204_NO_CONTENT)
@@ -34,7 +33,7 @@ def create(request):
 def categories(request):
     """Gets All Categories"""
     categories = Category.objects.all()
-    serializer = CategorySerializer(categories, many=True)
+    serializer = CategorySerializer(categories, many=True, context={"request": request})
     return Response(serializer.data)
 
 
@@ -53,7 +52,7 @@ def update(request, pk):
             category.save()
         
         category.save()
-        serializer = CategorySerializer(category, many=False)
+        serializer = CategorySerializer(category, many=False, context={"request": request})
         return Response(serializer.data)
     except Exception as e:
         return Response({'details': f"{e}"},status=status.HTTP_204_NO_CONTENT)

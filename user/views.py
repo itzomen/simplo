@@ -54,7 +54,7 @@ def registerUser(request):
             user.avatar = avatar
             user.save()
 
-        serializer = UserSerializerWithToken(user, many=False)
+        serializer = UserSerializerWithToken(user, many=False, context={"request": request})
         return Response(serializer.data)
     except:
         message = {"detail": "User with this email already exists"}
