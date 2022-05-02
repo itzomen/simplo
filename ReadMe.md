@@ -56,3 +56,7 @@ python manage.py runserver
 
 ```
 
+## Resources
+- [Receive Webhooks in Django](https://blog.logrocket.com/receive-webhooks-python-flask-or-django/)
+- [How to build Webhook Receiver in Django](https://adamj.eu/tech/2021/05/09/how-to-build-a-webhook-receiver-in-django/)
+

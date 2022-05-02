@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/user/', include('user.urls')),
     path('api/category/', include('category.urls')),
+    path('api/webhook/', include('webhook.urls')),
 ]
 
 # setting this to view media files from admin panel
