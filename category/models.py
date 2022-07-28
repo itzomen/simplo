@@ -9,3 +9,8 @@ class Category(models.Model):
     image = VersatileImageField(upload_to="categories", blank=True, null=True)
     description = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    # meta class
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
